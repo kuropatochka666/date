@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Animating SVG Text on a Path | Codrops</title>
+		<meta name="description" content="Animating SVG text on a path on scroll using the Intersection Observer API and SVG filters.">
+		<meta name="keywords" content="svg text, animation, scroll, svg filter, Intersection Observer">
+		<meta name="author" content="Codrops">
+		<link rel="shortcut icon" href="favicon.2e5f6236.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/rhw1vur.css">
+		<link rel="stylesheet" type="text/css" href="base.bd67a085.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className = "js";
+
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+</head>
+<body>
+	<svg class="svgtext svgtext--1" data-filter-type="blur" width="120%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 200">
+				<path id="text-curve1" d="M 0 100 Q 250 200 500 100 Q 750 0 1000 100" fill="none"></path>
+				<text filter="url(#blur)">
+					<textPath href="#text-curve1">
+						You may think I’m small, but I have a universe inside my mind.
+					</textPath>
+				</text>
+			</svg>
+</body>
+</html>
